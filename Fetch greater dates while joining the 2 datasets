@@ -1,0 +1,7 @@
+#study -> Schema 
+#Fetch greater dates while joining the 2 datasets
+SELECT AE.PT, AE.CPEVENT, AE.AEENDAT_FUL, DS1.DSSTDAT
+FROM Study$CURRENT.AE
+FULL JOIN Study$CURRENT.DS1
+ON AE.PT = DS1.PT
+WHERE AE.AEENDAT > DS1.DSSTDAT;
